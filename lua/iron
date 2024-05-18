@@ -1,0 +1,6 @@
+shell.run("rom/programs/http/wget", "https://github.com/tyty0817/test/raw/main/iron1.dfpwm")
+shell.run("rom/programs/fun/speaker", "play", "iron1.dfpwm")
+shell.run("rom/programs/delete", "iron1.dfpwm")
+shell.run("rom/programs/http/wget", "https://github.com/tyty0817/test/raw/main/iron2.dfpwm")
+shell.run("rom/programs/fun/speaker", "play", "iron2.dfpwm")
+shell.run("rom/programs/delete", "iron2.dfpwm")
