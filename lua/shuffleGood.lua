@@ -1,6 +1,6 @@
 while(true)
 do
-  x = math.random(11)
+  x = math.random(17)
   if x == 1 then
     shell.run("16.lua")
   elseif x == 2 then
@@ -27,5 +27,13 @@ do
     shell.run("water.lua")
   elseif x == 13 then
     shell.run("kick.lua")
+  elseif x == 14 then
+    shell.run("rock.lua")
+  elseif x == 15 then
+    shell.run("uranium.lua")
+  elseif x == 16 then
+    shell.run("crawl.lua")
+  elseif x == 17 then
+    shell.run("bongo.lua")
   end
 end
