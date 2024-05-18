@@ -1,0 +1,6 @@
+shell.run("rom/programs/http/wget", "https://github.com/tyty0817/test/raw/main/water1.dfpwm")
+shell.run("rom/programs/fun/speaker", "play", "water1.dfpwm")
+shell.run("rom/programs/delete", "water1.dfpwm")
+shell.run("rom/programs/http/wget", "https://github.com/tyty0817/test/raw/main/water2.dfpwm")
+shell.run("rom/programs/fun/speaker", "play", "water2.dfpwm")
+shell.run("rom/programs/delete", "water2.dfpwm")
