@@ -23,5 +23,9 @@ do
     shell.run("shadow.lua")
   elseif x == 11 then
     shell.run("stars.lua")
-                      end
-                    end
+  elseif x == 12 then
+    shell.run("water.lua")
+  elseif x == 13 then
+    shell.run("kick.lua")
+  end
+end
