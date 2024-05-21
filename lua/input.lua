@@ -2,39 +2,39 @@ modem = peripheral.wrap("top")
 modem.open(42)
 repeat
     event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
-    if x == 1 then
+    if message == 16 then
     shell.run("16.lua")
-        elseif x == 2 then
+        elseif message == act then
     shell.run("act.lua")
-        elseif x == 3 then
+        elseif message == cry then
     shell.run("cry.lua")
-        elseif x == 4 then
+        elseif message == guitar then
     shell.run("guitar.lua")
-        elseif x == 5 then
+        elseif message == lonesome then
     shell.run("lonesome.lua")
-        elseif x == 6 then
+        elseif message == Sin then
     shell.run("Sin.lua")
-        elseif x == 7 then
+        elseif message == Heartache then
     shell.run("Heartache.lua")
-        elseif x == 8 then
-    shell.run("Dixie.lua")
-        elseif x == 9 then
+        elseif message == Dimessageie then
+    shell.run("Dimessageie.lua")
+        elseif message == iron then
     shell.run("iron.lua")
-        elseif x == 10 then
+        elseif message == shadow then
     shell.run("shadow.lua")
-        elseif x == 11 then
+        elseif message == stars then
     shell.run("stars.lua")
-        elseif x == 12 then
+        elseif message == water then
     shell.run("water.lua")
-    elseif x == 13 then
+    elseif message == kick then
         shell.run("kick.lua")
-    elseif x == 14 then
+    elseif message == rock then
         shell.run("rock.lua")
-    elseif x == 15 then
+    elseif message == uranium then
         shell.run("uranium.lua")
-    elseif x == 16 then
+    elseif message == crawl then
         shell.run("crawl.lua")
-    elseif x == 17 then
+    elseif message == bongo then
         shell.run("bongo.lua")
     end
 until channel == 43
