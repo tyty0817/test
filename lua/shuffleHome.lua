@@ -37,4 +37,7 @@ repeat
     elseif x == 17 then
         modem.transmit(42, 0, "bongo")
     end
+    repeat
+        event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
+    until message == "done"
 until channel == 43
