@@ -1,6 +1,13 @@
 modem = peripheral.wrap("back")
 modem.open(42)
 repeat
+    local time = string.sub(os.time(), 4, 4)
+    if string.len(time) == 0 then
+        modem.transmit(42, 0, 0)
+    else
+        time = (time + 5) % 10
+        modem.transmit(42, 0, time)
+    end
     x = math.random(17)
     if x == 1 then
         modem.transmit(42, 0, "16")
@@ -40,4 +47,5 @@ repeat
     repeat
         event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
     until message == "done"
+    sleep(0.1)
 until channel == 43
