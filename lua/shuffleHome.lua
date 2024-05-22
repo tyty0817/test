@@ -1,7 +1,7 @@
 modem = peripheral.wrap("back")
 modem.open(42)
 repeat
-    local time = string.sub(os.time(), 4, 4)
+    local time = string.sub(os.time(), 5, 5)
     if string.len(time) == 0 then
         modem.transmit(42, 0, 0)
     else
