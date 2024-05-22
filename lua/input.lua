@@ -2,8 +2,9 @@ modem = peripheral.wrap("top")
 modem.open(42)
 repeat
     event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
-    repeat until string.sub(os.time(), 5, 5) == tostring(message)
+    time = message
     event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
+    repeat until string.sub(os.time(), 4, 4) == tostring(time)
     if message == 16 then
         shell.run("16.lua")
     elseif message == "act" then
