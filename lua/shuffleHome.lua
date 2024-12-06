@@ -1,51 +1,46 @@
-modem = peripheral.wrap("back")
-modem.open(42)
-repeat
-    local time = string.sub(os.time(), 4, 4)
-    if string.len(time) == 0 then
-        modem.transmit(42, 0, 0)
-    else
-        time = (time + 5) % 10
-        modem.transmit(42, 0, time)
-    end
-    x = math.random(17)
-    if x == 1 then
-        modem.transmit(42, 0, "16")
-    elseif x == 2 then
-        modem.transmit(42, 0, "act")
-    elseif x == 3 then
-        modem.transmit(42, 0, "cry")
-    elseif x == 4 then
-        modem.transmit(42, 0, "guitar")
-    elseif x == 5 then
-        modem.transmit(42, 0, "lonesome")
-    elseif x == 6 then
-        modem.transmit(42, 0, "Sin")
-    elseif x == 7 then
-        modem.transmit(42, 0, "Heartache")
-    elseif x == 8 then
-        modem.transmit(42, 0, "Dixie")
-    elseif x == 9 then
-        modem.transmit(42, 0, "iron")
-    elseif x == 10 then
-        modem.transmit(42, 0, "shadow")
-    elseif x == 11 then
-        modem.transmit(42, 0, "stars")
-    elseif x == 12 then
-        modem.transmit(42, 0, "water")
-    elseif x == 13 then
-        modem.transmit(42, 0, "kick")
-    elseif x == 14 then
-        modem.transmit(42, 0, "rock")
-    elseif x == 15 then
-        modem.transmit(42, 0, "uranium")
-    elseif x == 16 then
-        modem.transmit(42, 0, "crawl")
-    elseif x == 17 then
-        modem.transmit(42, 0, "bongo")
-    end
-    repeat
-        event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
-    until message == "done"
-    sleep(0.1)
-until channel == 43
+rednet.open("top")
+::start::
+x = math.random(17)
+if x == 17 then
+    rednet.broadcast("16.lua", "castle")
+elseif x == 16 then
+    rednet.broadcast("act.lua", "castle")
+elseif x == 15 then
+    rednet.broadcast("cry.lua", "castle")
+elseif x == 14 then
+    rednet.broadcast("guitar.lua", "castle")
+elseif x == 13 then
+    rednet.broadcast("lonesome.lua", "castle")
+elseif x == 12 then
+    rednet.broadcast("Sin.lua", "castle")
+elseif x == 11 then
+    rednet.broadcast("Heartache.lua", "castle")
+elseif x == 10 then
+    rednet.broadcast("Dixie.lua", "castle")
+elseif x == 9 then
+    rednet.broadcast("iron.lua", "castle")
+elseif x == 8 then
+    rednet.broadcast("shadow.lua", "castle")
+elseif x == 7 then
+    rednet.broadcast("stars.lua", "castle")
+elseif x == 6 then
+    rednet.broadcast("water.lua", "castle")
+elseif x == 5 then
+    rednet.broadcast("kick.lua", "castle")
+elseif x == 4 then
+    rednet.broadcast("rock.lua", "castle")
+elseif x == 3 then
+    rednet.broadcast("uranium.lua", "castle")
+elseif x == 2 then
+    rednet.broadcast("crawl.lua", "castle")
+elseif x == 1 then
+    rednet.broadcast("bongo.lua", "castle")
+end
+::listen::
+rednet.recieve("castle")
+local id, message = rednet.receive()
+if (id == 5 and message == "done") then
+    goto start
+elseif (id != 5) then
+    goto listen
+end
