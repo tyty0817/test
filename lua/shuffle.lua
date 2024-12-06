@@ -1,4 +1,4 @@
-while(true){
+while(true)
     x = math.random(17)
     if x == 17 then
         shell.run("16.lua")
@@ -34,4 +34,3 @@ while(true){
         shell.run("crawl.lua")
     elseif x == 1 then
         shell.run("bongo.lua")
-}
