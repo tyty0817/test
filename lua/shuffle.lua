@@ -1,3 +1,4 @@
+x = 0
 while(true)
     x = math.random(17)
     if x == 17 then
