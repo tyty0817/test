@@ -14,5 +14,5 @@ shell.run("rom/programs/http/wget", "https://github.com/tyty0817/test/raw/refs/h
 shell.run("rom/programs/http/wget", "https://github.com/tyty0817/test/raw/refs/heads/main/lua/uranium.lua")
 shell.run("rom/programs/http/wget", "https://github.com/tyty0817/test/raw/refs/heads/main/lua/crawl.lua")
 shell.run("rom/programs/http/wget", "https://github.com/tyty0817/test/raw/refs/heads/main/lua/bongo.lua")
-shell.run("rom/programs/http/wget", "https://github.com/tyty0817/test/raw/refs/heads/main/lua/bongo.lua")
+shell.run("rom/programs/http/wget", "https://github.com/tyty0817/test/raw/refs/heads/main/lua/shuffle.lua")
 shell.run("rom/programs/delete", "downloader.lua")
