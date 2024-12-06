@@ -1,37 +1,37 @@
 while(true){
     x = math.random(17)
-    if x == 16 then
+    if x == 17 then
         shell.run("16.lua")
-    elseif x == "act" then
+    elseif x == 16 then
         shell.run("act.lua")
-    elseif x == "cry" then
+    elseif x == 15 then
         shell.run("cry.lua")
-    elseif x == "guitar" then
+    elseif x == 14 then
         shell.run("guitar.lua")
-    elseif x == "lonesome" then
+    elseif x == 13 then
         shell.run("lonesome.lua")
-    elseif x == "Sin" then
+    elseif x == 12 then
         shell.run("Sin.lua")
-    elseif x == "Heartache" then
+    elseif x == 11 then
         shell.run("Heartache.lua")
-    elseif x == "Dixie" then
+    elseif x == 10 then
         shell.run("Dixie.lua")
-    elseif x == "iron" then
+    elseif x == 9 then
         shell.run("iron.lua")
-    elseif x == "shadow" then
+    elseif x == 8 then
         shell.run("shadow.lua")
-    elseif x == "stars" then
+    elseif x == 7 then
         shell.run("stars.lua")
-    elseif x == "water" then
+    elseif x == 6 then
         shell.run("water.lua")
-    elseif x == "kick" then
+    elseif x == 5 then
         shell.run("kick.lua")
-    elseif x == "rock" then
+    elseif x == 4 then
         shell.run("rock.lua")
-    elseif x == "uranium" then
+    elseif x == 3 then
         shell.run("uranium.lua")
-    elseif x == "crawl" then
+    elseif x == 2 then
         shell.run("crawl.lua")
-    elseif x == "bongo" then
+    elseif x == 1 then
         shell.run("bongo.lua")
-    }
+}
