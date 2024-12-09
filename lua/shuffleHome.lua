@@ -1,6 +1,7 @@
 rednet.open("top")
 ::start::
 x = math.random(17)
+rednet.broadcast("1", "castle")
 if x == 17 then
     rednet.broadcast("16.lua", "castle")
 elseif x == 16 then
